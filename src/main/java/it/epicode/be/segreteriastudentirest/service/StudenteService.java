@@ -56,5 +56,10 @@ public class StudenteService {
 	public void delete(Long id) {
 		studenteRepository.deleteById(id);
 	}
+	
+	public Page<Studente> findByCorsoDiLaurea(Long id, Pageable pageable) {
+		return studenteRepository.findByCorsoDiLaurea(id);
+		
+	}
 
 }
